@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 sh 'echo this is a checkout we nfjd gv'
-                sh 'echo this new'
+                sh 'echo this new1'
             }
         }
 
