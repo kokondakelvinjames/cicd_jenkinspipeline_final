@@ -17,6 +17,23 @@ pipeline {
                 
             }
         }
+        stage('SonarScan') {
+            steps {
+                script {
+                    sh '''
+                        which sonar-scanner
+                        sonar-scanner -v
+                    '''
+                }
+            }
+        }
+
+
+        stage('build') {
+            steps {
+                sh 'ls -lrt'
+            }
+        }
 
     }
 }
