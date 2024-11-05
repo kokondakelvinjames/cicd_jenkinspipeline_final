@@ -1,11 +1,20 @@
+@Library('mySharedLibrary') _
+
 pipeline {
     agent any
     stages {
         stage('Checkout') {
             steps {
-                sh 'echo this is a checkout we nfjd gv'
-                sh 'echo this new1'
-                sh 'echo this v6'
+                script {
+                    def config = [
+                        url: 'https://github.com/kokondakelvinjames/cicd_jenkinspipeline_final.git',
+                        credentialsId: 'github_token',
+                        branch: 'main'
+
+                    ]
+                    gitCheckout(config)
+                }
+                
             }
         }
 
