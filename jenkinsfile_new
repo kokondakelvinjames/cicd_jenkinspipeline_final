@@ -33,7 +33,13 @@ pipeline {
 
         stage('build') {
             steps {
-                sh 'ls -lrt'
+                script {
+                    buildPushDockerImage('dockerhub-creds',
+                                        'kelvinjames/ip_app',
+                                        '4',
+                                        './Dockerfile')
+                
+                }
             }
         }
 
