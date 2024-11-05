@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo this is a checkout we nfjd gv'
                 sh 'echo this new1'
+                sh 'echo this v6'
             }
         }
 
